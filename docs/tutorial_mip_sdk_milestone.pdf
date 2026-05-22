@@ -248,7 +248,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 15 0 R >>
 endobj
 17 0 obj
-<< /Length 3394 >>
+<< /Length 3429 >>
 stream
 BT /F3 9.00 Tf 48.00 811.89 Td (Tutorial MIP SDK Milestone) Tj ET
 0.78 0.78 0.78 RG 48.00 801.89 m 547.28 801.89 l S
@@ -270,13 +270,13 @@ BT /F1 10.50 Tf 48.00 476.49 Td (Exemplo simplificado baseado no padrão document
 BT /F4 8.30 Tf 48.00 447.63 Td (using System;) Tj ET
 BT /F4 8.30 Tf 48.00 434.51 Td (using System.Net;) Tj ET
 BT /F4 8.30 Tf 48.00 421.38 Td (using VideoOS.Platform.Login;) Tj ET
-BT /F4 8.30 Tf 48.00 408.25 Td (using VideoOS.Platform.SDK;) Tj ET
+BT /F4 8.30 Tf 48.00 408.25 Td (using MipEnvironment = VideoOS.Platform.SDK.Environment;) Tj ET
 BT /F4 8.30 Tf 48.00 395.13 Td () Tj ET
 BT /F4 8.30 Tf 48.00 382.00 Td (class Program) Tj ET
 BT /F4 8.30 Tf 48.00 368.88 Td ({) Tj ET
 BT /F4 8.30 Tf 48.00 355.75 Td (static void Main\(\)) Tj ET
 BT /F4 8.30 Tf 48.00 342.62 Td ({) Tj ET
-BT /F4 8.30 Tf 48.00 329.50 Td (Environment.Initialize\(\);) Tj ET
+BT /F4 8.30 Tf 48.00 329.50 Td (MipEnvironment.Initialize\(\);) Tj ET
 BT /F4 8.30 Tf 48.00 316.37 Td () Tj ET
 BT /F4 8.30 Tf 48.00 303.25 Td (var managementServerUri = new Uri\("https://xprotect.example.com"\);) Tj ET
 BT /F4 8.30 Tf 48.00 290.12 Td (var secureOnly = true;) Tj ET
@@ -294,7 +294,7 @@ BT /F4 8.30 Tf 48.00 145.73 Td ("seu_usuario",) Tj ET
 BT /F4 8.30 Tf 48.00 132.61 Td ("sua_senha",) Tj ET
 BT /F4 8.30 Tf 48.00 119.48 Td ("Basic"\);) Tj ET
 BT /F4 8.30 Tf 48.00 106.36 Td () Tj ET
-BT /F4 8.30 Tf 48.00 93.23 Td (Environment.AddServer\() Tj ET
+BT /F4 8.30 Tf 48.00 93.23 Td (MipEnvironment.AddServer\() Tj ET
 BT /F4 8.30 Tf 48.00 80.10 Td (secureOnly,) Tj ET
 BT /F4 8.30 Tf 48.00 66.98 Td (managementServerUri,) Tj ET
 0.78 0.78 0.78 RG 48.00 36.00 m 547.28 36.00 l S
@@ -305,14 +305,14 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 17 0 R >>
 endobj
 19 0 obj
-<< /Length 3103 >>
+<< /Length 3106 >>
 stream
 BT /F3 9.00 Tf 48.00 811.89 Td (Tutorial MIP SDK Milestone) Tj ET
 0.78 0.78 0.78 RG 48.00 801.89 m 547.28 801.89 l S
 BT /F4 8.30 Tf 48.00 785.89 Td (credentials,) Tj ET
 BT /F4 8.30 Tf 48.00 772.76 Td (masterOnly\);) Tj ET
 BT /F4 8.30 Tf 48.00 759.64 Td () Tj ET
-BT /F4 8.30 Tf 48.00 746.51 Td (Environment.Login\() Tj ET
+BT /F4 8.30 Tf 48.00 746.51 Td (MipEnvironment.Login\() Tj ET
 BT /F4 8.30 Tf 48.00 733.39 Td (managementServerUri,) Tj ET
 BT /F4 8.30 Tf 48.00 720.26 Td (integrationId,) Tj ET
 BT /F4 8.30 Tf 48.00 707.13 Td (integrationName,) Tj ET
@@ -538,19 +538,19 @@ xref
 0000014277 00000 n 
 0000017460 00000 n 
 0000017624 00000 n 
-0000021071 00000 n 
-0000021235 00000 n 
-0000024391 00000 n 
-0000024555 00000 n 
-0000027127 00000 n 
-0000027291 00000 n 
-0000029967 00000 n 
-0000030131 00000 n 
-0000033273 00000 n 
-0000033437 00000 n 
-0000035632 00000 n 
+0000021106 00000 n 
+0000021270 00000 n 
+0000024429 00000 n 
+0000024593 00000 n 
+0000027165 00000 n 
+0000027329 00000 n 
+0000030005 00000 n 
+0000030169 00000 n 
+0000033311 00000 n 
+0000033475 00000 n 
+0000035670 00000 n 
 trailer
 << /Size 29 /Root 1 0 R >>
 startxref
-35796
+35834
 %%EOF

@@ -256,13 +256,13 @@ Exemplo simplificado baseado no padrão documentado:
 using System;
 using System.Net;
 using VideoOS.Platform.Login;
-using VideoOS.Platform.SDK;
+using MipEnvironment = VideoOS.Platform.SDK.Environment;
 
 class Program
 {
     static void Main()
     {
-        Environment.Initialize();
+        MipEnvironment.Initialize();
 
         var managementServerUri = new Uri("https://xprotect.example.com");
         var secureOnly = true;
@@ -280,13 +280,13 @@ class Program
                 "sua_senha",
                 "Basic");
 
-        Environment.AddServer(
+        MipEnvironment.AddServer(
             secureOnly,
             managementServerUri,
             credentials,
             masterOnly);
 
-        Environment.Login(
+        MipEnvironment.Login(
             managementServerUri,
             integrationId,
             integrationName,
