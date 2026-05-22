@@ -1,0 +1,556 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R 26 0 R 28 0 R] /Count 11 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+7 0 obj
+<< /Length 3736 >>
+stream
+BT /F3 9.00 Tf 48.00 811.89 Td (Tutorial MIP SDK Milestone) Tj ET
+0.78 0.78 0.78 RG 48.00 801.89 m 547.28 801.89 l S
+BT /F2 20.00 Tf 48.00 775.89 Td (Tutorial introdutório: Milestone MIP SDK) Tj ET
+BT /F1 10.50 Tf 48.00 734.49 Td (Este tutorial foi criado para orientar os primeiros estudos sobre o Milestone Integration) Tj ET
+BT /F1 10.50 Tf 48.00 720.63 Td (Platform Software Development Kit \(MIP SDK\), usado para integrar soluções ao Milestone) Tj ET
+BT /F1 10.50 Tf 48.00 706.77 Td (XProtect, uma plataforma de VMS \(Video Management Software\) para gerenciamento de vídeo,) Tj ET
+BT /F1 10.50 Tf 48.00 692.91 Td (eventos, alarmes, dispositivos e operadores.) Tj ET
+BT /F3 9.80 Tf 60.00 668.05 Td (Escopo: visão geral, conceitos essenciais, preparação do ambiente, primeiro teste via API, primeiro) Tj ET
+BT /F3 9.80 Tf 60.00 655.11 Td (caminho em C#/.NET e roteiro de estudo.) Tj ET
+0.78 0.78 0.78 RG 48.00 633.18 m 547.28 633.18 l S
+BT /F2 15.00 Tf 48.00 607.18 Td (1. O que é o MIP SDK?) Tj ET
+BT /F1 10.50 Tf 48.00 574.38 Td (O MIP SDK é o conjunto de bibliotecas, APIs, documentação, modelos de projeto, ferramentas e) Tj ET
+BT /F1 10.50 Tf 48.00 560.52 Td (exemplos fornecido pela Milestone para criar integrações com o XProtect. Com ele, um) Tj ET
+BT /F1 10.50 Tf 48.00 546.66 Td (desenvolvedor pode:) Tj ET
+BT /F1 10.50 Tf 60.00 521.80 Td (- Ler configuração do VMS, como sites, câmeras, usuários, eventos e regras.) Tj ET
+BT /F1 10.50 Tf 60.00 500.94 Td (- Consumir vídeo ao vivo, vídeo gravado, áudio e metadados.) Tj ET
+BT /F1 10.50 Tf 60.00 480.08 Td (- Disparar eventos e alarmes para acionar regras no XProtect.) Tj ET
+BT /F1 10.50 Tf 60.00 459.22 Td (- Enviar comandos de controle, por exemplo PTZ, saída externa, bookmark ou start/stop de) Tj ET
+BT /F1 10.50 Tf 60.00 445.36 Td (gravação.) Tj ET
+BT /F1 10.50 Tf 60.00 424.50 Td (- Criar aplicações independentes em C#.) Tj ET
+BT /F1 10.50 Tf 60.00 403.64 Td (- Criar plug-ins que rodam dentro do Smart Client, Management Client ou Event Server.) Tj ET
+BT /F1 10.50 Tf 60.00 382.78 Td (- Integrar por protocolos de rede, como REST, WebSocket, GraphQL, SOAP ou TCP, quando a) Tj ET
+BT /F1 10.50 Tf 60.00 368.92 Td (solução não precisa ser um plug-in nativo.) Tj ET
+BT /F1 10.50 Tf 48.00 344.06 Td (Em termos simples: o MIP SDK é a porta de entrada para transformar o XProtect em uma plataforma) Tj ET
+BT /F1 10.50 Tf 48.00 330.20 Td (extensível, conectada a sistemas externos e adaptada a fluxos de operação específicos.) Tj ET
+0.78 0.78 0.78 RG 48.00 307.34 m 547.28 307.34 l S
+BT /F2 15.00 Tf 48.00 281.34 Td (2. Onde o MIP SDK se encaixa no XProtect?) Tj ET
+BT /F1 10.50 Tf 48.00 248.54 Td (Uma implantação típica do XProtect envolve vários componentes:) Tj ET
+BT /F1 10.50 Tf 60.00 223.68 Td (- Management Server: concentra configuração, usuários, permissões e estado lógico do) Tj ET
+BT /F1 10.50 Tf 60.00 209.82 Td (sistema.) Tj ET
+BT /F1 10.50 Tf 60.00 188.96 Td (- Recording Server: recebe, grava e fornece vídeo de câmeras e outros dispositivos.) Tj ET
+BT /F1 10.50 Tf 60.00 168.10 Td (- Event Server: processa eventos, alarmes, mapas, integrações e comunicação MIP.) Tj ET
+BT /F1 10.50 Tf 60.00 147.24 Td (- Smart Client: aplicação usada por operadores para monitorar vídeo, alarmes e incidentes.) Tj ET
+BT /F1 10.50 Tf 60.00 126.38 Td (- Management Client: aplicação administrativa usada para configurar o sistema.) Tj ET
+BT /F1 10.50 Tf 60.00 105.52 Td (- API Gateway: ponto de entrada para APIs modernas, como REST e WebSocket.) Tj ET
+BT /F1 10.50 Tf 60.00 84.66 Td (- Identity Provider \(IDP\): serviço usado para autenticação e emissão de tokens.) Tj ET
+0.78 0.78 0.78 RG 48.00 36.00 m 547.28 36.00 l S
+BT /F1 8.00 Tf 499.28 22.00 Td (Pagina 1) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 2873 >>
+stream
+BT /F3 9.00 Tf 48.00 811.89 Td (Tutorial MIP SDK Milestone) Tj ET
+0.78 0.78 0.78 RG 48.00 801.89 m 547.28 801.89 l S
+BT /F1 10.50 Tf 48.00 785.89 Td (O MIP SDK conversa com esses componentes de formas diferentes, dependendo do tipo de integração) Tj ET
+BT /F1 10.50 Tf 48.00 772.03 Td (escolhido.) Tj ET
+0.78 0.78 0.78 RG 48.00 749.17 m 547.28 749.17 l S
+BT /F2 15.00 Tf 48.00 723.17 Td (3. Os três modos de integração) Tj ET
+BT /F1 10.50 Tf 48.00 690.37 Td (A documentação oficial organiza o MIP SDK em três grandes modos: Protocol, Component e Plug-in.) Tj ET
+BT /F2 12.50 Tf 48.00 660.51 Td (3.1 Protocol Integration) Tj ET
+BT /F1 10.50 Tf 48.00 634.01 Td (Use Protocol Integration quando sua aplicação deve conversar com o XProtect por APIs de rede. É) Tj ET
+BT /F1 10.50 Tf 48.00 620.15 Td (a melhor opção para serviços backend, integrações web, automações, aplicações em linguagens que) Tj ET
+BT /F1 10.50 Tf 48.00 606.29 Td (não sejam C# ou cenários em que você quer evitar instalar DLLs do MIP SDK no processo da) Tj ET
+BT /F1 10.50 Tf 48.00 592.43 Td (aplicação.) Tj ET
+BT /F1 10.50 Tf 48.00 567.57 Td (Exemplos de uso:) Tj ET
+BT /F1 10.50 Tf 60.00 542.71 Td (- Um serviço Python ou Node.js que consulta alarmes.) Tj ET
+BT /F1 10.50 Tf 60.00 521.85 Td (- Um backend que dispara eventos de analytics.) Tj ET
+BT /F1 10.50 Tf 60.00 500.99 Td (- Uma aplicação web que lista câmeras e sites.) Tj ET
+BT /F1 10.50 Tf 60.00 480.13 Td (- Um sistema corporativo que integra regras do XProtect via REST.) Tj ET
+BT /F1 10.50 Tf 48.00 455.27 Td (APIs e áreas comuns:) Tj ET
+BT /F1 10.50 Tf 60.00 430.41 Td (- Configuration API) Tj ET
+BT /F1 10.50 Tf 60.00 409.55 Td (- Events API) Tj ET
+BT /F1 10.50 Tf 60.00 388.69 Td (- Alarms API) Tj ET
+BT /F1 10.50 Tf 60.00 367.83 Td (- Bookmarks API) Tj ET
+BT /F1 10.50 Tf 60.00 346.97 Td (- Evidence Locks API) Tj ET
+BT /F1 10.50 Tf 60.00 326.11 Td (- Messaging) Tj ET
+BT /F1 10.50 Tf 60.00 305.25 Td (- Control) Tj ET
+BT /F1 10.50 Tf 60.00 284.39 Td (- Video, Audio & Metadata) Tj ET
+BT /F1 10.50 Tf 60.00 263.53 Td (- Authentication) Tj ET
+BT /F1 10.50 Tf 60.00 242.67 Td (- Status) Tj ET
+BT /F2 12.50 Tf 48.00 212.81 Td (3.2 Component Integration) Tj ET
+BT /F1 10.50 Tf 48.00 186.31 Td (Use Component Integration quando você está criando uma aplicação independente em C#/.NET, mas) Tj ET
+BT /F1 10.50 Tf 48.00 172.45 Td (quer usar os componentes e bibliotecas nativas do MIP SDK.) Tj ET
+BT /F1 10.50 Tf 48.00 147.59 Td (Exemplos de uso:) Tj ET
+BT /F1 10.50 Tf 60.00 122.73 Td (- Uma aplicação desktop que mostra vídeo ao vivo de câmeras do XProtect.) Tj ET
+BT /F1 10.50 Tf 60.00 101.87 Td (- Um painel operacional customizado.) Tj ET
+BT /F1 10.50 Tf 60.00 81.01 Td (- Uma aplicação que autentica no XProtect e acessa configuração.) Tj ET
+0.78 0.78 0.78 RG 48.00 36.00 m 547.28 36.00 l S
+BT /F1 8.00 Tf 499.28 22.00 Td (Pagina 2) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 3318 >>
+stream
+BT /F3 9.00 Tf 48.00 811.89 Td (Tutorial MIP SDK Milestone) Tj ET
+0.78 0.78 0.78 RG 48.00 801.89 m 547.28 801.89 l S
+BT /F1 10.50 Tf 60.00 785.89 Td (- Um serviço local que dispara eventos e comandos.) Tj ET
+BT /F1 10.50 Tf 48.00 761.03 Td (Recursos típicos:) Tj ET
+BT /F1 10.50 Tf 60.00 736.17 Td (- Exibir vídeo ao vivo e gravado.) Tj ET
+BT /F1 10.50 Tf 60.00 715.31 Td (- Obter streams de vídeo.) Tj ET
+BT /F1 10.50 Tf 60.00 694.45 Td (- Acessar configuração do sistema.) Tj ET
+BT /F1 10.50 Tf 60.00 673.59 Td (- Enviar eventos.) Tj ET
+BT /F1 10.50 Tf 60.00 652.73 Td (- Emitir comandos de controle.) Tj ET
+BT /F1 10.50 Tf 60.00 631.87 Td (- Usar telas e componentes auxiliares de login.) Tj ET
+BT /F2 12.50 Tf 48.00 602.01 Td (3.3 Plug-in Integration) Tj ET
+BT /F1 10.50 Tf 48.00 575.51 Td (Use Plug-in Integration quando a solução precisa rodar dentro de uma aplicação XProtect, como o) Tj ET
+BT /F1 10.50 Tf 48.00 561.65 Td (Smart Client, Management Client ou Event Server.) Tj ET
+BT /F1 10.50 Tf 48.00 536.79 Td (Exemplos de uso:) Tj ET
+BT /F1 10.50 Tf 60.00 511.93 Td (- Adicionar uma aba customizada ao Smart Client.) Tj ET
+BT /F1 10.50 Tf 60.00 491.07 Td (- Sobrepor gráficos em vídeo ao vivo ou gravado.) Tj ET
+BT /F1 10.50 Tf 60.00 470.21 Td (- Criar ações customizadas de regra no Event Server.) Tj ET
+BT /F1 10.50 Tf 60.00 449.35 Td (- Receber eventos em tempo real.) Tj ET
+BT /F1 10.50 Tf 60.00 428.49 Td (- Criar uma página de configuração no Management Client.) Tj ET
+BT /F1 10.50 Tf 60.00 407.63 Td (- Compartilhar configurações entre plug-ins e aplicações.) Tj ET
+BT /F1 10.50 Tf 48.00 382.77 Td (Esse modo é poderoso, mas exige maior cuidado com ciclo de vida, instalação, compatibilidade de) Tj ET
+BT /F1 10.50 Tf 48.00 368.91 Td (versão, carregamento de DLLs e logs do host.) Tj ET
+0.78 0.78 0.78 RG 48.00 346.05 m 547.28 346.05 l S
+BT /F2 15.00 Tf 48.00 320.05 Td (4. Como escolher o modo correto?) Tj ET
+BT /F4 8.60 Tf 48.00 287.25 Td (Necessidade | Modo recomendado) Tj ET
+BT /F4 8.60 Tf 48.00 272.76 Td (Chamar APIs por HTTP a partir de qualquer linguagem | Protocol) Tj ET
+BT /F4 8.60 Tf 48.00 258.27 Td (Criar backend, automação ou integração cloud/on-premise | Protocol) Tj ET
+BT /F4 8.60 Tf 48.00 243.77 Td (Criar aplicação desktop C# independente | Component) Tj ET
+BT /F4 8.60 Tf 48.00 229.28 Td (Mostrar vídeo usando componentes nativos do SDK | Component) Tj ET
+BT /F4 8.60 Tf 48.00 214.79 Td (Alterar a experiência do operador no Smart Client | Plug-in) Tj ET
+BT /F4 8.60 Tf 48.00 200.30 Td (Criar ações, itens ou processamento dentro do Event Server | Plug-in) Tj ET
+BT /F4 8.60 Tf 48.00 185.81 Td (Criar telas administrativas no Management Client | Plug-in) Tj ET
+BT /F1 10.50 Tf 48.00 167.31 Td (Regra prática:) Tj ET
+BT /F1 10.50 Tf 60.00 142.45 Td (- Comece por Protocol se seu objetivo é aprender com menor atrito.) Tj ET
+BT /F1 10.50 Tf 60.00 121.59 Td (- Vá para Component quando precisar de recursos nativos .NET, principalmente vídeo e) Tj ET
+BT /F1 10.50 Tf 60.00 107.73 Td (componentes prontos.) Tj ET
+BT /F1 10.50 Tf 60.00 86.87 Td (- Use Plug-in quando a integração precisa aparecer ou executar dentro do ecossistema) Tj ET
+BT /F1 10.50 Tf 60.00 73.01 Td (XProtect.) Tj ET
+0.78 0.78 0.78 RG 48.00 36.00 m 547.28 36.00 l S
+BT /F1 8.00 Tf 499.28 22.00 Td (Pagina 3) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 2896 >>
+stream
+BT /F3 9.00 Tf 48.00 811.89 Td (Tutorial MIP SDK Milestone) Tj ET
+0.78 0.78 0.78 RG 48.00 801.89 m 547.28 801.89 l S
+0.78 0.78 0.78 RG 48.00 783.89 m 547.28 783.89 l S
+BT /F2 15.00 Tf 48.00 757.89 Td (5. Pré-requisitos para estudar) Tj ET
+BT /F1 10.50 Tf 48.00 725.09 Td (Para seguir os estudos com prática, prepare:) Tj ET
+BT /F1 10.50 Tf 60.00 700.23 Td (1. Conta Milestone) Tj ET
+BT /F1 10.50 Tf 60.00 679.37 Td (- Necessária para downloads, licenças e acesso a recursos de parceiro.) Tj ET
+BT /F1 10.50 Tf 60.00 654.51 Td (2. Ambiente XProtect de desenvolvimento) Tj ET
+BT /F1 10.50 Tf 60.00 633.65 Td (- A documentação oficial recomenda um sistema separado e pequeno para desenvolvimento.) Tj ET
+BT /F1 10.50 Tf 60.00 612.79 Td (- Para as APIs modernas, use XProtect VMS 2022 R1 ou posterior.) Tj ET
+BT /F1 10.50 Tf 60.00 587.93 Td (3. Licença) Tj ET
+BT /F1 10.50 Tf 60.00 567.07 Td (- Você pode usar licença de avaliação ou licença de desenvolvimento/parceiro, conforme) Tj ET
+BT /F1 10.50 Tf 60.00 553.21 Td (disponibilidade.) Tj ET
+BT /F1 10.50 Tf 60.00 528.35 Td (4. Windows para desenvolvimento C#) Tj ET
+BT /F1 10.50 Tf 60.00 507.49 Td (- Visual Studio.) Tj ET
+BT /F1 10.50 Tf 60.00 486.63 Td (- Templates do MIP SDK, quando usar plug-ins ou projetos C#.) Tj ET
+BT /F1 10.50 Tf 60.00 465.77 Td (- Pacotes NuGet da Milestone, como MilestoneSystems.VideoOS.Platform.SDK.) Tj ET
+BT /F1 10.50 Tf 60.00 440.91 Td (5. Ferramentas para APIs) Tj ET
+BT /F1 10.50 Tf 60.00 420.05 Td (- Postman, curl, PowerShell ou similar.) Tj ET
+BT /F1 10.50 Tf 60.00 399.19 Td (- Conhecimento básico de HTTP, JSON e OAuth/Bearer tokens.) Tj ET
+BT /F1 10.50 Tf 60.00 374.33 Td (6. Certificados) Tj ET
+BT /F1 10.50 Tf 60.00 353.47 Td (- Para produção, use HTTPS com certificado válido.) Tj ET
+BT /F1 10.50 Tf 60.00 332.61 Td (- Evite HTTP em ambientes reais, pois credenciais e tokens podem trafegar em texto claro.) Tj ET
+0.78 0.78 0.78 RG 48.00 309.75 m 547.28 309.75 l S
+BT /F2 15.00 Tf 48.00 283.75 Td (6. Primeiro exercício: testar a API Gateway) Tj ET
+BT /F1 10.50 Tf 48.00 250.95 Td (Este é o caminho mais simples para começar, porque você pode validar a comunicação sem escrever) Tj ET
+BT /F1 10.50 Tf 48.00 237.09 Td (uma aplicação completa.) Tj ET
+BT /F2 12.50 Tf 48.00 207.23 Td (6.1 Verificar se a API Gateway responde) Tj ET
+BT /F1 10.50 Tf 48.00 180.73 Td (Substitua xprotect.example.com pelo host do seu ambiente:) Tj ET
+BT /F4 8.30 Tf 48.00 151.87 Td (curl --insecure --request GET "https://xprotect.example.com/api/.well-known/uris") Tj ET
+BT /F1 10.50 Tf 48.00 130.74 Td (Se o ambiente foi instalado sem HTTPS, use http://, mas trate isso apenas como laboratório.) Tj ET
+BT /F2 12.50 Tf 48.00 100.88 Td (6.2 Obter um token) Tj ET
+BT /F1 10.50 Tf 48.00 74.38 Td (Exemplo com usuário básico:) Tj ET
+0.78 0.78 0.78 RG 48.00 36.00 m 547.28 36.00 l S
+BT /F1 8.00 Tf 499.28 22.00 Td (Pagina 4) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 3130 >>
+stream
+BT /F3 9.00 Tf 48.00 811.89 Td (Tutorial MIP SDK Milestone) Tj ET
+0.78 0.78 0.78 RG 48.00 801.89 m 547.28 801.89 l S
+BT /F4 8.30 Tf 48.00 777.89 Td (curl --insecure --request POST "https://xprotect.example.com/API/IDP/connect/token" \\) Tj ET
+BT /F4 8.30 Tf 48.00 764.76 Td (--header "Content-Type: application/x-www-form-urlencoded" \\) Tj ET
+BT /F4 8.30 Tf 48.00 751.64 Td (--data-urlencode "grant_type=password" \\) Tj ET
+BT /F4 8.30 Tf 48.00 738.51 Td (--data-urlencode "username=seu_usuario" \\) Tj ET
+BT /F4 8.30 Tf 48.00 725.39 Td (--data-urlencode "password=sua_senha" \\) Tj ET
+BT /F4 8.30 Tf 48.00 712.26 Td (--data-urlencode "client_id=GrantValidatorClient") Tj ET
+BT /F1 10.50 Tf 48.00 691.13 Td (A resposta deve conter algo parecido com:) Tj ET
+BT /F4 8.30 Tf 48.00 662.27 Td ({) Tj ET
+BT /F4 8.30 Tf 48.00 649.15 Td ("access_token": "eyJ...",) Tj ET
+BT /F4 8.30 Tf 48.00 636.02 Td ("expires_in": 3600,) Tj ET
+BT /F4 8.30 Tf 48.00 622.90 Td ("token_type": "Bearer",) Tj ET
+BT /F4 8.30 Tf 48.00 609.77 Td ("scope": "managementserver") Tj ET
+BT /F4 8.30 Tf 48.00 596.64 Td (}) Tj ET
+BT /F1 10.50 Tf 48.00 575.52 Td (Guarde o access_token apenas temporariamente. Não salve tokens em código-fonte.) Tj ET
+BT /F2 12.50 Tf 48.00 545.66 Td (6.3 Fazer a primeira chamada REST) Tj ET
+BT /F4 8.30 Tf 48.00 515.16 Td (curl --insecure --request GET "https://xprotect.example.com/api/rest/v1/sites" \\) Tj ET
+BT /F4 8.30 Tf 48.00 502.03 Td (--header "Authorization: Bearer SEU_TOKEN") Tj ET
+BT /F1 10.50 Tf 48.00 480.91 Td (Se a chamada retornar uma lista de sites, você validou:) Tj ET
+BT /F1 10.50 Tf 60.00 456.05 Td (- conectividade com o host;) Tj ET
+BT /F1 10.50 Tf 60.00 435.19 Td (- funcionamento da API Gateway;) Tj ET
+BT /F1 10.50 Tf 60.00 414.33 Td (- autenticação no IDP;) Tj ET
+BT /F1 10.50 Tf 60.00 393.47 Td (- autorização básica para consultar configuração.) Tj ET
+0.78 0.78 0.78 RG 48.00 370.61 m 547.28 370.61 l S
+BT /F2 15.00 Tf 48.00 344.61 Td (7. Segundo exercício: explorar eventos e alarmes) Tj ET
+BT /F1 10.50 Tf 48.00 311.81 Td (Depois de listar sites, experimente áreas funcionais:) Tj ET
+BT /F4 8.30 Tf 48.00 282.95 Td (curl --insecure --request GET "https://xprotect.example.com/api/rest/v1/events" \\) Tj ET
+BT /F4 8.30 Tf 48.00 269.82 Td (--header "Authorization: Bearer SEU_TOKEN") Tj ET
+BT /F4 8.30 Tf 48.00 244.69 Td (curl --insecure --request GET "https://xprotect.example.com/api/rest/v1/alarms" \\) Tj ET
+BT /F4 8.30 Tf 48.00 231.57 Td (--header "Authorization: Bearer SEU_TOKEN") Tj ET
+BT /F1 10.50 Tf 48.00 210.44 Td (Ideias de estudo:) Tj ET
+BT /F1 10.50 Tf 60.00 185.58 Td (- Liste tipos de eventos disponíveis.) Tj ET
+BT /F1 10.50 Tf 60.00 164.72 Td (- Entenda a diferença entre eventos, regras e alarmes.) Tj ET
+BT /F1 10.50 Tf 60.00 143.86 Td (- Crie uma regra no Management Client e veja como um evento pode acioná-la.) Tj ET
+BT /F1 10.50 Tf 60.00 123.00 Td (- Verifique permissões do usuário quando uma chamada retornar 401 ou 403.) Tj ET
+0.78 0.78 0.78 RG 48.00 100.14 m 547.28 100.14 l S
+0.78 0.78 0.78 RG 48.00 36.00 m 547.28 36.00 l S
+BT /F1 8.00 Tf 499.28 22.00 Td (Pagina 5) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 3394 >>
+stream
+BT /F3 9.00 Tf 48.00 811.89 Td (Tutorial MIP SDK Milestone) Tj ET
+0.78 0.78 0.78 RG 48.00 801.89 m 547.28 801.89 l S
+BT /F2 15.00 Tf 48.00 777.89 Td (8. Primeiro caminho em C# com Component Integration) Tj ET
+BT /F1 10.50 Tf 48.00 745.09 Td (Quando você quiser sair das chamadas REST e usar bibliotecas nativas, crie uma aplicação C# e) Tj ET
+BT /F1 10.50 Tf 48.00 731.23 Td (adicione os pacotes NuGet do MIP SDK. Para aplicações independentes, o pacote central costuma) Tj ET
+BT /F1 10.50 Tf 48.00 717.37 Td (ser:) Tj ET
+BT /F4 8.30 Tf 48.00 688.51 Td (dotnet add package MilestoneSystems.VideoOS.Platform.SDK) Tj ET
+BT /F3 9.80 Tf 60.00 667.38 Td (Observação: confirme a versão compatível com a versão do seu XProtect e com o tipo de projeto) Tj ET
+BT /F3 9.80 Tf 60.00 654.45 Td (usado. Em projetos MIP, compatibilidade de versão importa.) Tj ET
+BT /F1 10.50 Tf 48.00 630.51 Td (Um fluxo conceitual de login em aplicação independente é:) Tj ET
+BT /F1 10.50 Tf 60.00 605.65 Td (1. Inicializar o ambiente SDK.) Tj ET
+BT /F1 10.50 Tf 60.00 584.79 Td (2. Informar o endereço do Management Server.) Tj ET
+BT /F1 10.50 Tf 60.00 563.93 Td (3. Criar credenciais.) Tj ET
+BT /F1 10.50 Tf 60.00 543.07 Td (4. Adicionar o servidor ao ambiente.) Tj ET
+BT /F1 10.50 Tf 60.00 522.21 Td (5. Realizar login.) Tj ET
+BT /F1 10.50 Tf 60.00 501.35 Td (6. Consultar configuração ou usar componentes de vídeo/eventos.) Tj ET
+BT /F1 10.50 Tf 48.00 476.49 Td (Exemplo simplificado baseado no padrão documentado:) Tj ET
+BT /F4 8.30 Tf 48.00 447.63 Td (using System;) Tj ET
+BT /F4 8.30 Tf 48.00 434.51 Td (using System.Net;) Tj ET
+BT /F4 8.30 Tf 48.00 421.38 Td (using VideoOS.Platform.Login;) Tj ET
+BT /F4 8.30 Tf 48.00 408.25 Td (using VideoOS.Platform.SDK;) Tj ET
+BT /F4 8.30 Tf 48.00 395.13 Td () Tj ET
+BT /F4 8.30 Tf 48.00 382.00 Td (class Program) Tj ET
+BT /F4 8.30 Tf 48.00 368.88 Td ({) Tj ET
+BT /F4 8.30 Tf 48.00 355.75 Td (static void Main\(\)) Tj ET
+BT /F4 8.30 Tf 48.00 342.62 Td ({) Tj ET
+BT /F4 8.30 Tf 48.00 329.50 Td (Environment.Initialize\(\);) Tj ET
+BT /F4 8.30 Tf 48.00 316.37 Td () Tj ET
+BT /F4 8.30 Tf 48.00 303.25 Td (var managementServerUri = new Uri\("https://xprotect.example.com"\);) Tj ET
+BT /F4 8.30 Tf 48.00 290.12 Td (var secureOnly = true;) Tj ET
+BT /F4 8.30 Tf 48.00 276.99 Td (var masterOnly = true;) Tj ET
+BT /F4 8.30 Tf 48.00 263.87 Td () Tj ET
+BT /F4 8.30 Tf 48.00 250.74 Td (var integrationId = new Guid\("7A7B4B62-A6F1-49E4-9C61-D541CC54411A"\);) Tj ET
+BT /F4 8.30 Tf 48.00 237.62 Td (var integrationName = "MeuPrimeiroEstudoMIP";) Tj ET
+BT /F4 8.30 Tf 48.00 224.49 Td (var version = "1.0.0.0";) Tj ET
+BT /F4 8.30 Tf 48.00 211.36 Td (var manufacturerName = "MinhaEmpresa";) Tj ET
+BT /F4 8.30 Tf 48.00 198.24 Td () Tj ET
+BT /F4 8.30 Tf 48.00 185.11 Td (CredentialCache credentials =) Tj ET
+BT /F4 8.30 Tf 48.00 171.99 Td (Util.BuildCredentialCache\() Tj ET
+BT /F4 8.30 Tf 48.00 158.86 Td (managementServerUri,) Tj ET
+BT /F4 8.30 Tf 48.00 145.73 Td ("seu_usuario",) Tj ET
+BT /F4 8.30 Tf 48.00 132.61 Td ("sua_senha",) Tj ET
+BT /F4 8.30 Tf 48.00 119.48 Td ("Basic"\);) Tj ET
+BT /F4 8.30 Tf 48.00 106.36 Td () Tj ET
+BT /F4 8.30 Tf 48.00 93.23 Td (Environment.AddServer\() Tj ET
+BT /F4 8.30 Tf 48.00 80.10 Td (secureOnly,) Tj ET
+BT /F4 8.30 Tf 48.00 66.98 Td (managementServerUri,) Tj ET
+0.78 0.78 0.78 RG 48.00 36.00 m 547.28 36.00 l S
+BT /F1 8.00 Tf 499.28 22.00 Td (Pagina 6) Tj ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Length 3103 >>
+stream
+BT /F3 9.00 Tf 48.00 811.89 Td (Tutorial MIP SDK Milestone) Tj ET
+0.78 0.78 0.78 RG 48.00 801.89 m 547.28 801.89 l S
+BT /F4 8.30 Tf 48.00 785.89 Td (credentials,) Tj ET
+BT /F4 8.30 Tf 48.00 772.76 Td (masterOnly\);) Tj ET
+BT /F4 8.30 Tf 48.00 759.64 Td () Tj ET
+BT /F4 8.30 Tf 48.00 746.51 Td (Environment.Login\() Tj ET
+BT /F4 8.30 Tf 48.00 733.39 Td (managementServerUri,) Tj ET
+BT /F4 8.30 Tf 48.00 720.26 Td (integrationId,) Tj ET
+BT /F4 8.30 Tf 48.00 707.13 Td (integrationName,) Tj ET
+BT /F4 8.30 Tf 48.00 694.01 Td (version,) Tj ET
+BT /F4 8.30 Tf 48.00 680.88 Td (manufacturerName,) Tj ET
+BT /F4 8.30 Tf 48.00 667.76 Td (masterOnly\);) Tj ET
+BT /F4 8.30 Tf 48.00 654.63 Td () Tj ET
+BT /F4 8.30 Tf 48.00 641.50 Td (Console.WriteLine\("Login realizado com sucesso."\);) Tj ET
+BT /F4 8.30 Tf 48.00 628.38 Td (}) Tj ET
+BT /F4 8.30 Tf 48.00 615.25 Td (}) Tj ET
+BT /F1 10.50 Tf 48.00 594.13 Td (Esse exemplo é apenas o começo. Depois do login, estude como navegar pela configuração,) Tj ET
+BT /F1 10.50 Tf 48.00 580.27 Td (localizar câmeras, consumir vídeo e enviar eventos.) Tj ET
+0.78 0.78 0.78 RG 48.00 557.41 m 547.28 557.41 l S
+BT /F2 15.00 Tf 48.00 531.41 Td (9. Primeiro caminho com Plug-in Integration) Tj ET
+BT /F1 10.50 Tf 48.00 498.61 Td (Para plug-ins, o fluxo de estudo recomendado é:) Tj ET
+BT /F1 10.50 Tf 60.00 473.75 Td (1. Instale os templates oficiais do MIP SDK para Visual Studio.) Tj ET
+BT /F1 10.50 Tf 60.00 452.89 Td (2. Crie um projeto a partir de um template, por exemplo:) Tj ET
+BT /F1 10.50 Tf 60.00 432.03 Td (- plug-in genérico;) Tj ET
+BT /F1 10.50 Tf 60.00 411.17 Td (- plug-in para Smart Client;) Tj ET
+BT /F1 10.50 Tf 60.00 390.31 Td (- plug-in de Search;) Tj ET
+BT /F1 10.50 Tf 60.00 369.45 Td (- plug-in de Access Control;) Tj ET
+BT /F1 10.50 Tf 60.00 348.59 Td (- driver MIP, se o caso for integração de dispositivo.) Tj ET
+BT /F1 10.50 Tf 60.00 327.73 Td (3. Compile o projeto.) Tj ET
+BT /F1 10.50 Tf 60.00 306.87 Td (4. Copie as DLLs para a pasta MIPPlugins do host correspondente.) Tj ET
+BT /F1 10.50 Tf 60.00 286.01 Td (5. Reinicie o Smart Client, Management Client ou Event Server.) Tj ET
+BT /F1 10.50 Tf 60.00 265.15 Td (6. Verifique se o plug-in foi carregado.) Tj ET
+BT /F1 10.50 Tf 60.00 244.29 Td (7. Depure anexando o Visual Studio ao processo do host.) Tj ET
+BT /F1 10.50 Tf 48.00 219.43 Td (Pastas comuns:) Tj ET
+BT /F1 10.50 Tf 60.00 194.57 Td (- Smart Client: %PROGRAMFILES%\\Milestone\\XProtect Smart Client\\MIPPlugins\\) Tj ET
+BT /F1 10.50 Tf 60.00 173.71 Td (- Management Client: %PROGRAMFILES%\\Milestone\\XProtect Management Client\\MIPPlugins\\) Tj ET
+BT /F1 10.50 Tf 60.00 152.85 Td (- Event Server: %PROGRAMFILES%\\Milestone\\XProtect Event Server\\MIPPlugins\\) Tj ET
+BT /F1 10.50 Tf 48.00 127.99 Td (Em plug-ins, preste atenção ao tipo de ambiente declarado, por exemplo Client, SmartClient,) Tj ET
+BT /F1 10.50 Tf 48.00 114.13 Td (Administration, Service ou Standalone, conforme o caso.) Tj ET
+0.78 0.78 0.78 RG 48.00 91.27 m 547.28 91.27 l S
+0.78 0.78 0.78 RG 48.00 36.00 m 547.28 36.00 l S
+BT /F1 8.00 Tf 499.28 22.00 Td (Pagina 7) Tj ET
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 19 0 R >>
+endobj
+21 0 obj
+<< /Length 2519 >>
+stream
+BT /F3 9.00 Tf 48.00 811.89 Td (Tutorial MIP SDK Milestone) Tj ET
+0.78 0.78 0.78 RG 48.00 801.89 m 547.28 801.89 l S
+BT /F2 15.00 Tf 48.00 777.89 Td (10. Conceitos que você deve dominar) Tj ET
+BT /F2 12.50 Tf 48.00 740.09 Td (Autenticação e autorização) Tj ET
+BT /F1 10.50 Tf 48.00 713.59 Td (Aprenda a diferença entre:) Tj ET
+BT /F1 10.50 Tf 60.00 688.73 Td (- usuário básico do XProtect;) Tj ET
+BT /F1 10.50 Tf 60.00 667.87 Td (- usuário Windows/AD;) Tj ET
+BT /F1 10.50 Tf 60.00 647.01 Td (- token OAuth/Bearer;) Tj ET
+BT /F1 10.50 Tf 60.00 626.15 Td (- permissões no Management Client;) Tj ET
+BT /F1 10.50 Tf 60.00 605.29 Td (- autenticação para REST versus autenticação em componentes .NET.) Tj ET
+BT /F2 12.50 Tf 48.00 575.43 Td (FQID) Tj ET
+BT /F1 10.50 Tf 48.00 548.93 Td (O FQID identifica itens dentro do ecossistema MIP. Ele aparece em câmeras, servidores,) Tj ET
+BT /F1 10.50 Tf 48.00 535.07 Td (dispositivos, plug-ins, endpoints e mensagens. Entender FQID ajuda a navegar configuração,) Tj ET
+BT /F1 10.50 Tf 48.00 521.21 Td (mensagens e eventos.) Tj ET
+BT /F2 12.50 Tf 48.00 491.35 Td (Eventos, regras e alarmes) Tj ET
+BT /F1 10.50 Tf 60.00 464.85 Td (- Evento: algo aconteceu, por exemplo movimento, analytics, entrada externa ou evento) Tj ET
+BT /F1 10.50 Tf 60.00 450.99 Td (customizado.) Tj ET
+BT /F1 10.50 Tf 60.00 430.13 Td (- Regra: lógica configurada no XProtect para reagir a eventos.) Tj ET
+BT /F1 10.50 Tf 60.00 409.27 Td (- Alarme: ocorrência operacional que exige atenção do operador.) Tj ET
+BT /F2 12.50 Tf 48.00 379.41 Td (Ambientes MIP) Tj ET
+BT /F1 10.50 Tf 48.00 352.91 Td (O mesmo código conceitual pode rodar em contextos diferentes:) Tj ET
+BT /F1 10.50 Tf 60.00 328.05 Td (- Standalone) Tj ET
+BT /F1 10.50 Tf 60.00 307.19 Td (- Smart Client) Tj ET
+BT /F1 10.50 Tf 60.00 286.33 Td (- Management Client) Tj ET
+BT /F1 10.50 Tf 60.00 265.47 Td (- Event Server) Tj ET
+BT /F1 10.50 Tf 60.00 244.61 Td (- Service) Tj ET
+BT /F1 10.50 Tf 48.00 219.75 Td (Cada ambiente tem ciclo de vida, permissões e APIs disponíveis diferentes.) Tj ET
+BT /F2 12.50 Tf 48.00 189.89 Td (Versionamento) Tj ET
+BT /F1 10.50 Tf 48.00 163.39 Td (Sempre confira:) Tj ET
+BT /F1 10.50 Tf 60.00 138.53 Td (- versão do XProtect;) Tj ET
+BT /F1 10.50 Tf 60.00 117.67 Td (- versão dos pacotes NuGet;) Tj ET
+BT /F1 10.50 Tf 60.00 96.81 Td (- versão dos templates;) Tj ET
+BT /F1 10.50 Tf 60.00 75.95 Td (- arquitetura x64;) Tj ET
+0.78 0.78 0.78 RG 48.00 36.00 m 547.28 36.00 l S
+BT /F1 8.00 Tf 499.28 22.00 Td (Pagina 8) Tj ET
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 21 0 R >>
+endobj
+23 0 obj
+<< /Length 2623 >>
+stream
+BT /F3 9.00 Tf 48.00 811.89 Td (Tutorial MIP SDK Milestone) Tj ET
+0.78 0.78 0.78 RG 48.00 801.89 m 547.28 801.89 l S
+BT /F1 10.50 Tf 60.00 785.89 Td (- dependências copiadas junto com o plug-in;) Tj ET
+BT /F1 10.50 Tf 60.00 765.03 Td (- notas de release do MIP SDK.) Tj ET
+0.78 0.78 0.78 RG 48.00 742.17 m 547.28 742.17 l S
+BT /F2 15.00 Tf 48.00 716.17 Td (11. Roteiro de estudo sugerido) Tj ET
+BT /F2 12.50 Tf 48.00 678.37 Td (Etapa 1: Fundamentos do XProtect) Tj ET
+BT /F1 10.50 Tf 60.00 651.87 Td (- Entenda Management Server, Recording Server, Event Server, Smart Client e Management) Tj ET
+BT /F1 10.50 Tf 60.00 638.01 Td (Client.) Tj ET
+BT /F1 10.50 Tf 60.00 617.15 Td (- Instale ou acesse um laboratório.) Tj ET
+BT /F1 10.50 Tf 60.00 596.29 Td (- Crie usuários, câmeras simuladas ou dispositivos de teste.) Tj ET
+BT /F2 12.50 Tf 48.00 566.43 Td (Etapa 2: Protocol Integration) Tj ET
+BT /F1 10.50 Tf 60.00 539.93 Td (- Teste /api/.well-known/uris.) Tj ET
+BT /F1 10.50 Tf 60.00 519.07 Td (- Obtenha token no IDP.) Tj ET
+BT /F1 10.50 Tf 60.00 498.21 Td (- Consulte /api/rest/v1/sites.) Tj ET
+BT /F1 10.50 Tf 60.00 477.35 Td (- Explore Configuration, Events e Alarms APIs.) Tj ET
+BT /F1 10.50 Tf 60.00 456.49 Td (- Automatize uma chamada simples em Python, PowerShell ou Node.js.) Tj ET
+BT /F2 12.50 Tf 48.00 426.63 Td (Etapa 3: Component Integration) Tj ET
+BT /F1 10.50 Tf 60.00 400.13 Td (- Crie aplicação C# independente.) Tj ET
+BT /F1 10.50 Tf 60.00 379.27 Td (- Instale MilestoneSystems.VideoOS.Platform.SDK.) Tj ET
+BT /F1 10.50 Tf 60.00 358.41 Td (- Faça login via SDK.) Tj ET
+BT /F1 10.50 Tf 60.00 337.55 Td (- Liste itens de configuração.) Tj ET
+BT /F1 10.50 Tf 60.00 316.69 Td (- Abra vídeo ao vivo de uma câmera usando samples oficiais como referência.) Tj ET
+BT /F2 12.50 Tf 48.00 286.83 Td (Etapa 4: Plug-in Integration) Tj ET
+BT /F1 10.50 Tf 60.00 260.33 Td (- Instale templates do Visual Studio.) Tj ET
+BT /F1 10.50 Tf 60.00 239.47 Td (- Compile um sample.) Tj ET
+BT /F1 10.50 Tf 60.00 218.61 Td (- Carregue no Smart Client.) Tj ET
+BT /F1 10.50 Tf 60.00 197.75 Td (- Adicione uma aba simples.) Tj ET
+BT /F1 10.50 Tf 60.00 176.89 Td (- Leia logs do host e pratique depuração.) Tj ET
+BT /F2 12.50 Tf 48.00 147.03 Td (Etapa 5: Projeto prático) Tj ET
+BT /F1 10.50 Tf 48.00 120.53 Td (Construa uma prova de conceito pequena:) Tj ET
+BT /F1 10.50 Tf 60.00 95.67 Td (- Um serviço recebe um alerta de um sistema externo.) Tj ET
+BT /F1 10.50 Tf 60.00 74.81 Td (- O serviço dispara um evento no XProtect via REST.) Tj ET
+0.78 0.78 0.78 RG 48.00 36.00 m 547.28 36.00 l S
+BT /F1 8.00 Tf 499.28 22.00 Td (Pagina 9) Tj ET
+endstream
+endobj
+24 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 23 0 R >>
+endobj
+25 0 obj
+<< /Length 3089 >>
+stream
+BT /F3 9.00 Tf 48.00 811.89 Td (Tutorial MIP SDK Milestone) Tj ET
+0.78 0.78 0.78 RG 48.00 801.89 m 547.28 801.89 l S
+BT /F1 10.50 Tf 60.00 785.89 Td (- Uma regra no XProtect transforma esse evento em alarme.) Tj ET
+BT /F1 10.50 Tf 60.00 765.03 Td (- O operador visualiza o alarme no Smart Client.) Tj ET
+BT /F1 10.50 Tf 48.00 740.17 Td (Esse projeto conecta os conceitos de autenticação, eventos, regras, alarmes e operação.) Tj ET
+0.78 0.78 0.78 RG 48.00 717.31 m 547.28 717.31 l S
+BT /F2 15.00 Tf 48.00 691.31 Td (12. Erros comuns de iniciantes) Tj ET
+BT /F1 10.50 Tf 60.00 658.51 Td (- Usar HTTP em ambiente real.) Tj ET
+BT /F1 10.50 Tf 60.00 637.65 Td (- Esquecer que o usuário precisa de permissões no XProtect.) Tj ET
+BT /F1 10.50 Tf 60.00 616.79 Td (- Misturar versões incompatíveis de SDK, NuGet e XProtect.) Tj ET
+BT /F1 10.50 Tf 60.00 595.93 Td (- Não reiniciar o host depois de instalar um plug-in.) Tj ET
+BT /F1 10.50 Tf 60.00 575.07 Td (- Copiar apenas a DLL principal e esquecer dependências.) Tj ET
+BT /F1 10.50 Tf 60.00 554.21 Td (- Não consultar logs do Event Server ou Smart Client.) Tj ET
+BT /F1 10.50 Tf 60.00 533.35 Td (- Tratar evento, regra e alarme como a mesma coisa.) Tj ET
+BT /F1 10.50 Tf 60.00 512.49 Td (- Começar por plug-in complexo antes de validar chamadas REST simples.) Tj ET
+BT /F1 10.50 Tf 60.00 491.63 Td (- Salvar usuário, senha ou token no código.) Tj ET
+0.78 0.78 0.78 RG 48.00 468.77 m 547.28 468.77 l S
+BT /F2 15.00 Tf 48.00 442.77 Td (13. Checklist para seu primeiro laboratório) Tj ET
+BT /F1 10.50 Tf 60.00 409.97 Td ([ ] Tenho acesso a um XProtect de teste.) Tj ET
+BT /F1 10.50 Tf 60.00 389.11 Td ([ ] Sei o endereço do Management Server/API Gateway.) Tj ET
+BT /F1 10.50 Tf 60.00 368.25 Td ([ ] Tenho usuário com permissões adequadas.) Tj ET
+BT /F1 10.50 Tf 60.00 347.39 Td ([ ] Consigo acessar /api/.well-known/uris.) Tj ET
+BT /F1 10.50 Tf 60.00 326.53 Td ([ ] Consigo obter token no IDP.) Tj ET
+BT /F1 10.50 Tf 60.00 305.67 Td ([ ] Consigo chamar /api/rest/v1/sites.) Tj ET
+BT /F1 10.50 Tf 60.00 284.81 Td ([ ] Li a página oficial sobre Protocol, Component e Plug-in.) Tj ET
+BT /F1 10.50 Tf 60.00 263.95 Td ([ ] Baixei ou clonei samples oficiais.) Tj ET
+BT /F1 10.50 Tf 60.00 243.09 Td ([ ] Instalei Visual Studio e templates se for estudar C#.) Tj ET
+BT /F1 10.50 Tf 60.00 222.23 Td ([ ] Documentei versões usadas no laboratório.) Tj ET
+0.78 0.78 0.78 RG 48.00 199.37 m 547.28 199.37 l S
+BT /F2 15.00 Tf 48.00 173.37 Td (14. Referências oficiais para continuar) Tj ET
+BT /F1 10.50 Tf 60.00 140.57 Td (- Documentação MIP SDK: https://doc.developer.milestonesys.com/) Tj ET
+BT /F1 10.50 Tf 60.00 119.71 Td (- Protocol, Component ou Plug-in:) Tj ET
+BT /F1 10.50 Tf 60.00 105.85 Td (https://doc.developer.milestonesys.com/mipvmsapi/content/integration-modes/) Tj ET
+BT /F1 10.50 Tf 60.00 84.99 Td (- Quickstart MIP SDK/API Gateway:) Tj ET
+BT /F1 10.50 Tf 60.00 71.13 Td (https://doc.developer.milestonesys.com/mipvmsapi/content/quickstart/) Tj ET
+0.78 0.78 0.78 RG 48.00 36.00 m 547.28 36.00 l S
+BT /F1 8.00 Tf 499.28 22.00 Td (Pagina 10) Tj ET
+endstream
+endobj
+26 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 25 0 R >>
+endobj
+27 0 obj
+<< /Length 2142 >>
+stream
+BT /F3 9.00 Tf 48.00 811.89 Td (Tutorial MIP SDK Milestone) Tj ET
+0.78 0.78 0.78 RG 48.00 801.89 m 547.28 801.89 l S
+BT /F1 10.50 Tf 60.00 785.89 Td (- APIs de protocolo: https://doc.developer.milestonesys.com/mipvmsapi/api-overview/) Tj ET
+BT /F1 10.50 Tf 60.00 765.03 Td (- Getting Started Guide em PDF:) Tj ET
+BT /F1 10.50 Tf 60.00 751.17 Td (https://doc.milestonesys.com/sysarch/pdf/latest/en-US/MilestoneMIPSDK_GettingStartedGuide_en) Tj ET
+BT /F1 10.50 Tf 60.00 737.31 Td (-US.pdf) Tj ET
+BT /F1 10.50 Tf 60.00 716.45 Td (- Samples oficiais de Component Integration:) Tj ET
+BT /F1 10.50 Tf 60.00 702.59 Td (https://github.com/milestonesys/mipsdk-samples-component) Tj ET
+BT /F1 10.50 Tf 60.00 681.73 Td (- Templates do MIP SDK para Visual Studio:) Tj ET
+BT /F1 10.50 Tf 60.00 667.87 Td (https://marketplace.visualstudio.com/items?itemName=milestonesys.mipsdk-templates) Tj ET
+BT /F1 10.50 Tf 60.00 647.01 Td (- Pacote NuGet MilestoneSystems.VideoOS.Platform.SDK:) Tj ET
+BT /F1 10.50 Tf 60.00 633.15 Td (https://www.nuget.org/packages/MilestoneSystems.VideoOS.Platform.SDK/) Tj ET
+0.78 0.78 0.78 RG 48.00 610.29 m 547.28 610.29 l S
+BT /F2 15.00 Tf 48.00 584.29 Td (15. Próximos passos) Tj ET
+BT /F1 10.50 Tf 48.00 551.49 Td (Para iniciar de forma segura:) Tj ET
+BT /F1 10.50 Tf 60.00 526.63 Td (1. Leia a página oficial sobre os três modos de integração.) Tj ET
+BT /F1 10.50 Tf 60.00 505.77 Td (2. Faça o exercício da API Gateway.) Tj ET
+BT /F1 10.50 Tf 60.00 484.91 Td (3. Consulte os samples oficiais.) Tj ET
+BT /F1 10.50 Tf 60.00 464.05 Td (4. Escolha um problema simples do seu contexto.) Tj ET
+BT /F1 10.50 Tf 60.00 443.19 Td (5. Implemente primeiro por REST.) Tj ET
+BT /F1 10.50 Tf 60.00 422.33 Td (6. Só depois avance para Component ou Plug-in se houver necessidade real.) Tj ET
+BT /F1 10.50 Tf 48.00 397.47 Td (Com essa base, você terá uma visão clara de quando usar cada parte do MIP SDK e como evoluir de) Tj ET
+BT /F1 10.50 Tf 48.00 383.61 Td (chamadas simples para integrações completas no ecossistema Milestone XProtect.) Tj ET
+0.78 0.78 0.78 RG 48.00 36.00 m 547.28 36.00 l S
+BT /F1 8.00 Tf 499.28 22.00 Td (Pagina 11) Tj ET
+endstream
+endobj
+28 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 27 0 R >>
+endobj
+xref
+0 29
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000192 00000 n 
+0000000289 00000 n 
+0000000391 00000 n 
+0000000496 00000 n 
+0000000591 00000 n 
+0000004379 00000 n 
+0000004541 00000 n 
+0000007466 00000 n 
+0000007629 00000 n 
+0000011000 00000 n 
+0000011164 00000 n 
+0000014113 00000 n 
+0000014277 00000 n 
+0000017460 00000 n 
+0000017624 00000 n 
+0000021071 00000 n 
+0000021235 00000 n 
+0000024391 00000 n 
+0000024555 00000 n 
+0000027127 00000 n 
+0000027291 00000 n 
+0000029967 00000 n 
+0000030131 00000 n 
+0000033273 00000 n 
+0000033437 00000 n 
+0000035632 00000 n 
+trailer
+<< /Size 29 /Root 1 0 R >>
+startxref
+35796
+%%EOF
